@@ -1,0 +1,26 @@
+{
+  "name": "GJP-chrome-extension-tools",
+  "update_url": "http://www.baidu.com/update.xml",
+  "description": "GJP-chrome-extension-tools",
+  "version": "1.4.0",
+  "permissions": ["tabs", "contextMenus", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+	"default_icon": "images/icon.png",
+    "default_title": "GJP-chrome-extension-tools",
+    "default_popup": "page.html"
+  },
+  "icons":
+  {
+    "16": "images/icon.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts":[{
+	"matches":["*://*/*"],
+	"js":["content_script.js"]
+  }],
+  "manifest_version": 2
+}
